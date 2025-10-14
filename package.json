@@ -1,0 +1,63 @@
+{
+  "name": "n8n-nodes-cluu",
+  "version": "0.1.0",
+  "description": "N8N nodes for the Cluu platform",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.softwarehelden.com",
+  "author": {
+    "name": "Jörg Metzler",
+    "email": "joerg.metzler@softwarehelden.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/softwarehelden-com/n8n-nodes-cluu.git"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "npx rimraf dist && tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json",
+    "pub": "robocopy D:\\git\\n8n-nodes-cluu\\dist\\ D:\\docker\\n8n\\n8n_data\\custom\\n8n-nodes-cluu /MIR",
+    "restart_docker": "docker container restart n8n-n8n-1",
+    "publish-docker": "powershell -File ./publish-docker.ps1"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/CluuOAuth2Api.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/CluuQuery/CluuQueryNode.node.ts",
+      "dist/nodes/CluuCrud/CluuCrudNode.node.ts",
+      "dist/nodes/CluuInsert/CluuInsertNode.node.ts",
+      "dist/nodes/CluuUpdate/CluuUpdateNode.node.ts",
+      "dist/nodes/CluuDelete/CluuDeleteNode.node.ts",
+      "dist/nodes/CluuInvoke/CluuInvokeNode.node.ts",
+      "dist/nodes/CluuCallAssistant/CluuCallAssistantNode.node.ts"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.2",
+    "@typescript-eslint/parser": "~8.32.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^5.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

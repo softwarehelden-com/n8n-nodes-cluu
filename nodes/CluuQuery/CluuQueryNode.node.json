@@ -1,0 +1,21 @@
+{
+	"node": "cluuQueryNode",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": [
+		"Development",
+		"Developer Tools"
+	],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://www.softwarehelden.com"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://www.softwarehelden.com"
+			}
+		]
+	}
+}
