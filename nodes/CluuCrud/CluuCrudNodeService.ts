@@ -106,8 +106,7 @@ export class CluuCrudNodeService {
 					);
 				}
 			} else {
-				const uuid = require('uuid');
-				const guid: string = uuid.v4();
+				const guid: string = crypto.randomUUID();
 
 				key = { $tmpKey: guid };
 			}
