@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-cluu",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "N8N nodes for the Cluu platform",
   "keywords": [
     "n8n-community-node-package"
@@ -39,13 +39,13 @@
       "dist/credentials/CluuOAuth2Api.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/CluuQuery/CluuQueryNode.node.ts",
-      "dist/nodes/CluuCrud/CluuCrudNode.node.ts",
-      "dist/nodes/CluuInsert/CluuInsertNode.node.ts",
-      "dist/nodes/CluuUpdate/CluuUpdateNode.node.ts",
-      "dist/nodes/CluuDelete/CluuDeleteNode.node.ts",
-      "dist/nodes/CluuInvoke/CluuInvokeNode.node.ts",
-      "dist/nodes/CluuCallAssistant/CluuCallAssistantNode.node.ts"
+      "dist/nodes/CluuQuery/CluuQueryNode.node.js",
+      "dist/nodes/CluuCrud/CluuCrudNode.node.js",
+      "dist/nodes/CluuInsert/CluuInsertNode.node.js",
+      "dist/nodes/CluuUpdate/CluuUpdateNode.node.js",
+      "dist/nodes/CluuDelete/CluuDeleteNode.node.js",
+      "dist/nodes/CluuInvoke/CluuInvokeNode.node.js",
+      "dist/nodes/CluuCallAssistant/CluuCallAssistantNode.node.js"
     ]
   },
   "devDependencies": {
