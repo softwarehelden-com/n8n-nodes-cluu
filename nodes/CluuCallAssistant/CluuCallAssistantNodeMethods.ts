@@ -1,11 +1,15 @@
-import { IExecuteFunctions, ILoadOptionsFunctions, INodePropertyOptions } from "n8n-workflow";
+import { IExecuteFunctions, ILoadOptionsFunctions, INodePropertyOptions } from 'n8n-workflow';
 
-import { CluuQueryService } from "../../CluuApi/Query/CluuQueryService";
+import { CluuQueryService } from '../../CluuApi/Query/CluuQueryService';
 
 interface IAssistant {
 	Caption: string;
 	Id: string;
 	UniqueId: string;
+}
+
+export enum WellKnownLoadMethods {
+	getAssistants = 'getAssistants',
 }
 
 export class CluuCallAssistantNodeMethods {
@@ -25,7 +29,7 @@ export class CluuCallAssistantNodeMethods {
 		const executeFunctions = functions as unknown as IExecuteFunctions;
 
 		const assistants = await CluuQueryService.instance.queryCluuAsync<IAssistant>(
-			`FROM CluuAssistant.Assistant SELECT Id, UniqueId, Caption`,
+			`FROM CluuAssistant.Assistant WHERE IsEnabled == TRUE SELECT Id, UniqueId, Caption`,
 			executeFunctions,
 		);
 

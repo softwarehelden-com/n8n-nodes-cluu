@@ -1,6 +1,6 @@
-import { INodeProperties } from "n8n-workflow";
-
-import { WellKnownAssistantParameterNames } from "./WellKnownAssistantParameterNames";
+import { INodeProperties } from 'n8n-workflow';
+import { WellKnownLoadMethods } from './CluuCallAssistantNodeMethods';
+import { WellKnownAssistantParameterNames } from './WellKnownAssistantParameterNames';
 
 export const AssistantIdProperty: INodeProperties = {
 	displayName: 'Assistant Name or ID',
@@ -9,7 +9,7 @@ export const AssistantIdProperty: INodeProperties = {
 	description:
 		'The assistant to call. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
 	typeOptions: {
-		loadOptionsMethod: 'getAssistants',
+		loadOptionsMethod: WellKnownLoadMethods.getAssistants,
 	},
 	options: [],
 	default: '',
