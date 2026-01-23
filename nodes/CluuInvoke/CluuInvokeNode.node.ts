@@ -9,7 +9,7 @@ import {
 } from 'n8n-workflow';
 
 import { CluuInvokeService } from '../../CluuApi/Invoke/CluuInvokeService';
-import { CluuInvokeNodeMethods } from './CluuInvokeMethods';
+import { CluuInvokeNodeMethods, WellKnownLoadMethods } from './CluuInvokeMethods';
 
 enum WellKnownInvokeParameterNames {
 	ActionName = 'actionName',
@@ -43,7 +43,7 @@ export class CluuInvokeNode implements INodeType {
 				name: WellKnownInvokeParameterNames.ActionName,
 				type: 'options',
 				typeOptions: {
-					loadOptionsMethod: 'getActions',
+					loadOptionsMethod: WellKnownLoadMethods.getActions,
 				},
 				options: [],
 				default: '',

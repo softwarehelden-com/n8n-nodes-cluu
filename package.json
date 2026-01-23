@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-cluu",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "N8N nodes for the Cluu platform",
   "keywords": [
     "n8n-community-node-package"

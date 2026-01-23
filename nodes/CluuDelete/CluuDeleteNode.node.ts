@@ -10,7 +10,7 @@ import { WellKnownCrudParameterNames } from '../CluuCrud/WellKnownCrudParameterN
 import {
 	CluuClassNamePropertyDescription,
 	CluuKeyValuePropertyDescription,
-} from '../CluuCrud/CluuCrudParameterDescriptions';
+} from '../CluuCrud/CluuCrudNodeParameters';
 import { CluuCrudNodeService } from '../CluuCrud/CluuCrudNodeService';
 
 export class CluuDeleteNode implements INodeType {

@@ -11,7 +11,7 @@ import {
 	CluuClassNamePropertyDescription,
 	HasCluuTemporaryKeyValuePropertyDescription,
 	PropertyValuesPropertyDescription,
-} from '../CluuCrud/CluuCrudParameterDescriptions';
+} from '../CluuCrud/CluuCrudNodeParameters';
 import { CluuCrudNodeService } from '../CluuCrud/CluuCrudNodeService';
 
 export class CluuInsertNode implements INodeType {

@@ -2,6 +2,10 @@ import { IExecuteFunctions, ILoadOptionsFunctions, INodePropertyOptions } from "
 
 import { CluuQueryService } from "../../CluuApi/Query/CluuQueryService";
 
+export enum WellKnownLoadMethods {
+	getActions = 'getActions',
+}
+
 interface IActionInfo {
 	Id: string;
 	Name: string;

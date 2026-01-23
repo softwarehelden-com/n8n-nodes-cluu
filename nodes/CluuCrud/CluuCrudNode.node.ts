@@ -12,7 +12,7 @@ import {
 	CluuKeyValuePropertyDescription,
 	HasCluuTemporaryKeyValuePropertyDescription,
 	PropertyValuesPropertyDescription,
-} from './CluuCrudParameterDescriptions';
+} from './CluuCrudNodeParameters';
 import { CluuCrudNodeService } from './CluuCrudNodeService';
 
 export class CluuCrudNode implements INodeType {

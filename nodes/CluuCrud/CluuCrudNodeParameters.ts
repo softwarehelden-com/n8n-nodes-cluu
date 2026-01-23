@@ -1,7 +1,7 @@
-import { INodeProperties } from "n8n-workflow";
-import { WellKnownCrudNodeMethodNames } from "./WellKnownCrudNodeMethodNames";
-import { WellKnownCrudOperations } from "./WellKnownCrudOperations";
-import { WellKnownCrudParameterNames } from "./WellKnownCrudParameterNames";
+import { INodeProperties } from 'n8n-workflow';
+import { WellKnownCrudNodeMethodNames } from './WellKnownCrudNodeMethodNames';
+import { WellKnownCrudOperations } from './WellKnownCrudOperations';
+import { WellKnownCrudParameterNames } from './WellKnownCrudParameterNames';
 
 export const CluuClassNamePropertyDescription: INodeProperties = {
 	displayName: 'Cluu Class Name or ID',
@@ -31,7 +31,7 @@ export const HasCluuTemporaryKeyValuePropertyDescription: INodeProperties = {
 	type: 'boolean',
 	displayOptions: {
 		show: {
-			changeType: [WellKnownCrudOperations.insert],
+			[WellKnownCrudParameterNames.changeType]: [WellKnownCrudOperations.insert],
 		},
 	},
 	default: false,
@@ -49,7 +49,10 @@ export const PropertyValuesPropertyDescription: INodeProperties = {
 	},
 	displayOptions: {
 		show: {
-			changeType: ['insert', 'update'],
+			[WellKnownCrudParameterNames.changeType]: [
+				WellKnownCrudOperations.insert,
+				WellKnownCrudOperations.update,
+			],
 		},
 	},
 	placeholder: 'Add Property Value',
